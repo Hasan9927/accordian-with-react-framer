@@ -6,12 +6,12 @@ const AccoElement = ({ques,referece}) => {
   const [ans, setAns] = useState(false);
 
   return (
-    <motion.div  drag dragElastic={0.5}  dragConstraints={referece} whileDrag={{scale:.9}} layout onClick={() => setAns(!ans)}
+    <motion.div  drag dragElastic={0.5}  dragConstraints={referece} whileDrag={{scale:.9}} layout 
       className={`shadow bg-red-50 h-auto p-2 py-5 rounded-xl cursor-pointer`}
     >
       <div className="flex items-center gap-5 font-syne">
         <motion.p
-        
+        onClick={() => setAns(!ans)}
           initial={{
             rotate: "0deg",
           }}
